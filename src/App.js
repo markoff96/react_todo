@@ -12,6 +12,7 @@ function App(props) {
     event.preventDefault()
     console.log(text)
     console.log(text)
+    console.log(text)
   }
 
   return <div className="App">
