@@ -11,6 +11,7 @@ function App(props) {
   function createNewTask(event) {
     event.preventDefault()
     console.log(text)
+    console.log(text)
   }
 
   return <div className="App">
