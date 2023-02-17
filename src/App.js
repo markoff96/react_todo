@@ -1,37 +1,28 @@
 import './App.css'
 import { useState } from 'react'
 
-import { createElement } from 'react'
-
-
-function createNewTask({inputValue}) {
-  console.log('clicked')
-  console.log(inputValue)
-  return createElement(
-    'li',
-     {className: 'creation'},
-    {inputValue}
-  );
-}
-
-
 
 function App() {
-  const [inputValue, setInputValue] = useState()
-  console.log(inputValue)
+  const [text, setText] = useState('Make a task')
+
+  function createNewTask(event) {
+    event.preventDefault()
+    console.log(text)
+  }
+
   return <div className="App">
     <div className='inputBlock'>
+      <form onSubmit={createNewTask}>
         <h1>Todo app React</h1>
-        <input className='inputField' 
-        placeholder={'Make a task'} ></input>
-        <button className='taskButton' onClick={createNewTask}>Add a task</button>   
+        <input className='inputField'  onChange={(e) => setText(e.target.value)} ></input>
+        <button className='taskButton' type='submit'>Add a task</button>  
+      </form>   
     </div>
-
-    
 
     <ul>
       <li>Bless the god imperror</li>
       <li>Become an Inqusitor</li>
+      <li>{text}</li>
     </ul>
   </div>
 }
