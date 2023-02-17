@@ -1,17 +1,19 @@
 import './App.css'
 import { useState } from 'react'
 
-// import { createElement } from 'react'
+import { createElement } from 'react'
 
 
-// // function createNewTask({inputValue}) {
-// //   return createElement(
-// //     'li',
-// //      {className: 'creation'},
-// //     {inputValue}
-// //   );
-// // }
-// // createNewTask()
+function createNewTask({inputValue}) {
+  console.log('clicked')
+  console.log(inputValue)
+  return createElement(
+    'li',
+     {className: 'creation'},
+    {inputValue}
+  );
+}
+
 
 
 function App() {
@@ -22,7 +24,7 @@ function App() {
         <h1>Todo app React</h1>
         <input className='inputField' 
         placeholder={'Make a task'} value={inputValue}></input>
-        <button className='taskButton' >Add a task</button>   
+        <button className='taskButton' onClick={createNewTask}>Add a task</button>   
     </div>
 
     
