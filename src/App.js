@@ -17,13 +17,13 @@ function createNewTask({inputValue}) {
 
 
 function App() {
-  const [inputValue] = useState()
+  const [inputValue, setInputValue] = useState()
   console.log(inputValue)
   return <div className="App">
     <div className='inputBlock'>
         <h1>Todo app React</h1>
         <input className='inputField' 
-        placeholder={'Make a task'} value={inputValue}></input>
+        placeholder={'Make a task'} ></input>
         <button className='taskButton' onClick={createNewTask}>Add a task</button>   
     </div>
 
