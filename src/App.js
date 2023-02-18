@@ -1,8 +1,6 @@
 import './App.css'
 import { useState } from 'react'
 
-const list = document.getElementsByClassName('list')
-
 function App(props) {
   const [text, setText] = useState('')
 
@@ -10,9 +8,6 @@ function App(props) {
  
   function createNewTask(event) {
     event.preventDefault()
-    console.log(text)
-    console.log(text)
-    console.log(text)
   }
 
   return <div className="App">
