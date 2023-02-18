@@ -5,10 +5,12 @@ import ToDoList from './components/ToDoList'
 
 const list = document.getElementsByClassName('list')
 
+
+
 function App() {
   return <div className='App'>
     <Input />
-    <ToDoList />
+    <ToDoList/>
   </div>
 
  
