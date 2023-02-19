@@ -1,13 +1,8 @@
-import { useState } from "react"
-import Input from "./Input"
+import Todo from "./Todo"
 
-function ToDoList() {
+function ToDoList({todos}) {
     return (
-        <div className='list'>
-          <li name="list">Bless the god imperror</li>
-          <li>Become an Inqusitor</li>
-          <li>{}</li>
-        </div>
+       todos.map((todo, index) => <Todo key={index} todo={todo}/>)
     )
     
 

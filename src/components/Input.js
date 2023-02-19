@@ -1,30 +1,24 @@
 import {useState } from 'react'
 
-function Input() {
+function Input({addTodo}) {
  const [text, setText] = useState('')
- const [element, setElement]= useState([text])
-
-
- function createNewTask(event) {
+ const createNewTask = (event) => {
     event.preventDefault()
-    setElement([text])
-    console.log(element)
+    addTodo(text)
+    setText('')
   }
 
-
-  return <div className="App">
-    <div className='inputBlock'>
+  return (
       <form onSubmit={createNewTask}>
-        <h1>Todo app React</h1>
-        <input className='inputField' placeholder='Type here...' onChange={(e) => setText(e.target.value)} ></input>
-        <button className='taskButton' type='submit'>Add task</button>
-         
+        <input className='inputField' 
+               placeholder='Type here...' 
+               onChange={(e) => setText(e.target.value)} 
+               value={text} 
+         />
+        <button type='submit'>Add task</button>
       </form>   
-    </div>
-  </div>
+  )
   
 }
-
-
 
 export default Input
