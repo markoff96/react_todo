@@ -1,11 +1,8 @@
 import './App.css'
 import { useState } from 'react'
 
-function App(props) {
-  const [text, setText] = useState('')
+function App() {
 
-  
- 
   function createNewTask(event) {
     event.preventDefault()
   }
