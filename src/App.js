@@ -17,7 +17,7 @@ function App() {
 
   return <div className='App'>
     <h1>Todo App React</h1>
-    <Input addTodo={addToHandler} />
+    <Input addTodo={addTodo} />
     <ToDoList todos={todos} deleteTodo={deleteTodo}  />
   </div>
 }
