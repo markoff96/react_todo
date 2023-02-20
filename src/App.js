@@ -7,7 +7,7 @@ import ToDoList from './components/ToDoList'
 function App() {
   const [todos,setTodos] = useState([])
 
-  const addToHandler = (text) => {
+  const addTodo = (text) => {
     setTodos([...todos, text])
   }
   
