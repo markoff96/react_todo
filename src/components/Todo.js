@@ -1,6 +1,9 @@
-function Todo({todo}) {
+function Todo({todo, deleteTodo, index}) {
     return(
-        <h3>{todo}</h3>
+       <div className="todoField" >
+        <div className="todoText">{todo}</div>
+        <button onClick={() => deleteTodo(index) } >X</button>
+       </div>
     )
 }
 
