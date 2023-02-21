@@ -14,23 +14,11 @@ function App() {
     setTodos(todos.filter((_, idx) => idx !== index));
   };
 
-  let completeArr = [];
-  const completeTodo = (index) => {
-    completeArr.push(todos.slice(index));
-    console.log(completeArr);
-    setTodos(todos.filter((_, idx) => idx !== index));
-    // доделать complete
-  };
-
   return (
     <div className="App">
       <h1>Todo App React</h1>
       <Input addTodo={addToHandler} />
-      <ToDoList
-        todos={todos}
-        deleteTodo={deleteTodo}
-        completeTodo={completeTodo}
-      />
+      <ToDoList todos={todos} deleteTodo={deleteTodo} />
     </div>
   );
 }
