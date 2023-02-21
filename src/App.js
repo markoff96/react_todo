@@ -1,26 +1,26 @@
-import './App.css'
-import { useState } from 'react'
+import { useState } from 'react';
+import './App.css';
+import Input from './components/Input';
+import ToDoList from './components/ToDoList';
 
 function App() {
+  const [todos, setTodos] = useState([]);
 
+  const addToHandler = (text) => {
+    setTodos([...todos, text]);
+  };
 
-  return <div className="App">
-    <div className='inputBlock'>
-      <form onSubmit={createNewTask}>
-        <h1>Todo app React</h1>
-        <input className='inputField'  onChange={(e) => setText(e.target.value)} ></input>
-        <button className='taskButton' type='submit'>Add task</button>  
-      </form>   
+  const deleteTodo = (index) => {
+    setTodos(todos.filter((_, idx) => idx !== index));
+  };
+
+  return (
+    <div className="App">
+      <h1>Todo App React</h1>
+      <Input addTodo={addToHandler} />
+      <ToDoList todos={todos} deleteTodo={deleteTodo} />
     </div>
-
-    <ul className='list'>
-      <li>Bless the god imperror</li>
-      <li>Become an Inqusitor</li>
-      <li>{text}</li>
-    </ul>
-  </div>
-
- 
+  );
 }
 
-export default App
+export default App;
