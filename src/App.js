@@ -3,9 +3,6 @@ import { useState } from 'react'
 
 function App() {
 
-  function createNewTask(event) {
-    event.preventDefault()
-  }
 
   return <div className="App">
     <div className='inputBlock'>
