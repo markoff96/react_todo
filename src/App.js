@@ -18,6 +18,7 @@ function App() {
   const completeTodo = (index) => {
     completeArr.push(todos.slice(index));
     console.log(completeArr);
+    setTodos(todos.filter((_, idx) => idx !== index));
     // доделать complete
   };
 
