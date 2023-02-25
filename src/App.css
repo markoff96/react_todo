@@ -1,23 +1,79 @@
-
 .App {
   text-align: center;
   margin-top: 100px;
-  color: rgb(68, 178, 251);
-  
+  color: white;
+}
+body {
+  background-color: rgb(10, 45, 86);
 }
 
-
-.inputField{
-  width: 300px;
+.inputField {
+  width: 60%;
   height: 30px;
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px
-
+  font-size: 1.3rem;
+  margin: 20px;
 }
-h1{
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
   font-family: 'Courier New', Courier, monospace;
 }
 
+button {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 5px;
+}
+.todoButtons {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  background-color: white;
+}
 
+button:hover {
+  background-color: rgb(33, 147, 153);
+}
 
+.todoForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todoBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todoField {
+  display: flex;
+  width: 40%;
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+}
+
+.todoText {
+  width: 100%;
+  text-align: left;
+}
+
+.completeTask {
+  display: flex;
+  width: 40%;
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  background-color: green;
+}
